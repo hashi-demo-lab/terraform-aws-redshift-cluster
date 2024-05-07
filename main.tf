@@ -5,8 +5,18 @@
 
 data "aws_availability_zones" "available" {}
 
+resource "random_string" "random" {
+  length = 5
+  min_lower = 5
+  numeric = false
+  upper = false
+  lower = true
+  special = false
+
+}
+
 locals {
-  name   = "test-${basename(path.cwd)}"
+  name   = "test-${basename(path.cwd)}-${random_string.random.result}"
 
   vpc_cidr = "10.0.0.0/16"
   azs      = slice(data.aws_availability_zones.available.names, 0, 3)
