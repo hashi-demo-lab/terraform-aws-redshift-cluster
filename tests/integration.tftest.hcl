@@ -22,7 +22,7 @@ mock_provider "aws" {
         defaults = {
             [
                 {
-                    "port": 5439,
+                    port= 5439,
                 },
             ],
         }
