@@ -17,6 +17,12 @@ mock_provider "aws" {
             ]
         }
     }
+
+    mock_resource aws_redshift_cluster {
+        defaults = {
+            port = 5439
+        }
+    }
 }
 
 # outputs.tf.tftest.hcl
