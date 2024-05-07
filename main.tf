@@ -15,7 +15,7 @@ locals {
 
   tags = {
     Example    = local.name
-    GithubRepo = "hashi-demo-lab/tfc-dpaas-demo"
+    GithubRepo = "hashi-demo-lab/terraform-aws-redshift-cluster"
   }
 
 }
