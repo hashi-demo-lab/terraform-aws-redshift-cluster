@@ -7,7 +7,10 @@ provider "aws" {
   region = var.region
 }
 
-provider "aws" {
-  region = var.secondary_region
-  alias = "secondary"
+# provider "aws" {
+#   region = var.secondary_region
+#   alias = "secondary"
+# }
+provider "awscc" {
+  region = var.region
 }
