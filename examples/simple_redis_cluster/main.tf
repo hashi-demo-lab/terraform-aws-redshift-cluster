@@ -6,7 +6,7 @@ data "tfe_outputs" "domain" {
 }
 
 module "redshift_cluster" {
-  source  = "app.terraform.io/tfc-demo-au/redshift-cluster/awscc"
+  source  = "app.terraform.io/tfc-demo-au/redshift-cluster/aws"
   version = "~>  0.1.0"
 
   aws_account                 = data.aws_caller_identity.current.account_id

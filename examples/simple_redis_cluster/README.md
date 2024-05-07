@@ -15,7 +15,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_redshift_cluster"></a> [redshift\_cluster](#module\_redshift\_cluster) | app.terraform.io/tfc-demo-au/redshift-cluster/awscc | ~>  0.1.0 |
+| <a name="module_redshift_cluster"></a> [redshift\_cluster](#module\_redshift\_cluster) | app.terraform.io/tfc-demo-au/redshift-cluster/aws | ~>  0.1.0 |
 
 ## Resources
 
