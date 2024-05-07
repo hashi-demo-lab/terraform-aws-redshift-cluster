@@ -7,27 +7,28 @@ variables {
   region                      = "ap-southeast-2"
 }
 
-mock_provider "aws" {
-    mock_data "aws_availability_zones" {
-        defaults = {
-            names = [
-                "ap-southeast-2a",
-                "ap-southeast-2b",
-                "ap-southeast-2c"
-            ]
-        }
-    }
+// Mocking is a work in progress
+// mock_provider "aws" {
+//     mock_data "aws_availability_zones" {
+//         defaults = {
+//             names = [
+//                 "ap-southeast-2a",
+//                 "ap-southeast-2b",
+//                 "ap-southeast-2c"
+//             ]
+//         }
+//     }
 
-    mock_resource "aws_redshift_cluster" {
-        defaults = {
-            [
-                {
-                    port= 5439,
-                },
-            ],
-        }
-    }
-}
+//     mock_resource "aws_redshift_cluster" {
+//         defaults = {
+//             [
+//                 {
+//                     port= 5439,
+//                 },
+//             ],
+//         }
+//     }
+// }
 
 # outputs.tf.tftest.hcl
 run "outputs_tf_validation" {
