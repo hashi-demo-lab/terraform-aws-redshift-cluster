@@ -9,6 +9,7 @@
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.48.0 |
+| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | n/a |
 
 ## Modules
 
@@ -21,14 +22,17 @@
 | Name | Type |
 |------|------|
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [tfe_outputs.domain](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/outputs) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_datazone_domain_id"></a> [datazone\_domain\_id](#input\_datazone\_domain\_id) | Domain ID of datazone; input value is rendered as output in the terraform-awscc-datazone-domain module | `string` | n/a | yes |
-| <a name="input_datazone_project_id"></a> [datazone\_project\_id](#input\_datazone\_project\_id) | Project ID of one of the projects associated to a datazone; input value is rendered as output in the terraform-awscc-datazone-domain module | `string` | n/a | yes |
+| <a name="input_datazone_domain_id"></a> [datazone\_domain\_id](#input\_datazone\_domain\_id) | Domain ID of datazone; input value is rendered as output in the terraform-awscc-datazone-domain module | `string` | `""` | no |
+| <a name="input_datazone_project_id"></a> [datazone\_project\_id](#input\_datazone\_project\_id) | Project ID of one of the projects associated to a datazone; input value is rendered as output in the terraform-awscc-datazone-domain module | `string` | `""` | no |
+| <a name="input_organization"></a> [organization](#input\_organization) | The HCP Terraform organization name | `string` | `"tfc-demo-au"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region to deploy the redis-cluster in | `string` | `"ap-southeast-2"` | no |
+| <a name="input_workspace_name"></a> [workspace\_name](#input\_workspace\_name) | The workspace to read outputs | `string` | `"datazone_domain"` | no |
 
 ## Outputs
 
