@@ -5,7 +5,7 @@ variables {
   datazone_project_id         = "48fdcbcmx2ficn"
   tags                        = null
   region                      = "ap-southeast-2"
-
+}
 
 # outputs.tf.tftest.hcl
 run "outputs_tf_validation" {
