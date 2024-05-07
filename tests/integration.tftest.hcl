@@ -3,28 +3,9 @@ variables {
   aws_account                 = "855831148133"
   datazone_domain_id          = "dzd_aigur9af556uqv"
   datazone_project_id         = "48fdcbcmx2ficn"
-  datazone_kms_key_identifier = null
-  single_sign_on              = {}
   tags                        = null
   region                      = "ap-southeast-2"
-  secondary_region            = "ap-southeast-1"
 
-  # Environment Blueprints - today AWS only support DefaultDataWarehouse, DefaultDataLake
-  environment_blueprints = {
-    DefaultDataWarehouse = {
-      enabled_regions                  = ["ap-southeast-2"]
-      environment_blueprint_identifier = "DefaultDataWarehouse"
-    }
-    DefaultDataLake = {
-      enabled_regions                  = ["ap-southeast-2"]
-      environment_blueprint_identifier = "DefaultDataLake"
-    }
-  }
-}
-
-provider "awscc" {
-  region = var.region
-}
 
 # outputs.tf.tftest.hcl
 run "outputs_tf_validation" {
