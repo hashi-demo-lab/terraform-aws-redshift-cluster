@@ -8,7 +8,6 @@ variables {
 }
 
 mock_provider "aws" {
-    region = var.region
 }
 
 # outputs.tf.tftest.hcl
