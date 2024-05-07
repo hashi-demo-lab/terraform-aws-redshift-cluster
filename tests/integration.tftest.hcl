@@ -8,6 +8,18 @@ variables {
 }
 
 mock_provider "aws" {
+    mock_data "aws_availability_zones" {
+        defaults = {
+            available = {
+                names = [
+                    "ap-southeast-2a",
+                    "ap-southeast-2b",
+                    "ap-southeast-2c",
+                    "ap-southeast-2d",
+                ]
+            }
+        }
+    }
 }
 
 # outputs.tf.tftest.hcl
