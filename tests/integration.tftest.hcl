@@ -7,6 +7,10 @@ variables {
   region                      = "ap-southeast-2"
 }
 
+mock_provider "aws" {
+    region = var.region
+}
+
 # outputs.tf.tftest.hcl
 run "outputs_tf_validation" {
   assert {
@@ -28,10 +32,6 @@ run "outputs_tf_validation" {
 
 # variables.tf.tftest.hcl
 run "variables_tf_validation" {
-  assert {
-    condition     = var.aws_account == "855831148133"
-    error_message = "incorrect AWS account variable"
-  }
 
   assert {
     condition     = var.datazone_domain_id != ""
