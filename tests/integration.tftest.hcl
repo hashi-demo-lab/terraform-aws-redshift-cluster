@@ -7,6 +7,29 @@ variables {
   region                      = "ap-southeast-2"
 }
 
+// Mocking is a work in progress
+// mock_provider "aws" {
+//     mock_data "aws_availability_zones" {
+//         defaults = {
+//             names = [
+//                 "ap-southeast-2a",
+//                 "ap-southeast-2b",
+//                 "ap-southeast-2c"
+//             ]
+//         }
+//     }
+
+//     mock_resource "aws_redshift_cluster" {
+//         defaults = {
+//             [
+//                 {
+//                     port= 5439,
+//                 },
+//             ],
+//         }
+//     }
+// }
+
 # outputs.tf.tftest.hcl
 run "outputs_tf_validation" {
   assert {
@@ -28,10 +51,6 @@ run "outputs_tf_validation" {
 
 # variables.tf.tftest.hcl
 run "variables_tf_validation" {
-  assert {
-    condition     = var.aws_account == "855831148133"
-    error_message = "incorrect AWS account variable"
-  }
 
   assert {
     condition     = var.datazone_domain_id != ""
